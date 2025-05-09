@@ -1,0 +1,111 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      border-top: 1px solid #444;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: 0.3s;
+    }
+
+    .hamburger::before {
+      top: -8px;
+    }
+
+    .hamburger::after {
+      top: 8px;
+    }
+
+    label.menu-btn {
+      cursor: pointer;
+      display: block;
+    }
+
+    /* Mostrar menu quando toggle está ativado */
+    .menu-toggle:checked + label + nav {
+      display: flex;
+    }
+
+    /* Layout desktop */
+    @media(min-width: 768px) {
+      label.menu-btn {
+        display: none;
+      }
+
+      nav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+      }
+
+      nav a {
+        border: none;
+        padding: 10px 15px;
+      }
+    }
+
+    main {
+      padding-top: 80px; /* Espaço para o header fixo */
+    }

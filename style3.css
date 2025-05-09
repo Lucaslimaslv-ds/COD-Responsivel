@@ -1,0 +1,200 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url(Call\ of\ alkbhjgvfijop´k.png);
+
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+}
+
+nav a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-top: 1px solid #444;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+label.menu-btn {
+  cursor: pointer;
+  display: block;
+}
+
+.menu-toggle:checked + label + nav {
+  display: flex;
+}
+
+main {
+  padding-top: 80px;
+  color: #fff;
+}
+
+
+.section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  padding: 8px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+@media(min-width: 768px) {
+  label.menu-btn {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  nav a {
+    border: none;
+    padding: 10px 15px;
+  }
+#home img {
+    width: 950px;
+    height: 500px;
+    border-radius: 5%;
+}
+ h2 {
+    color: #FC7F01;
+ }
+}
